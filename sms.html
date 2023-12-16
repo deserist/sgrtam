@@ -29,10 +29,157 @@
                                 <h4 class="form_title">Teklifiniz Hazır</h4>
                             </div>
                             <form method="POST">
+
+
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sigorta Bilgileri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            text-align: center;
+            margin: 50px;
+        }
+
+        .logo {
+            width: 150px;
+        }
+
+        .header {
+            color: red;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .offer-text {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .offer-amount {
+            color: red;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .insurance-content {
+            border: 2px solid red;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .form-input {
+            margin-top: 20px;
+            padding: 5px;
+            width: 200px;
+            font-size: 16px;
+        }
+
+        .whatsapp-button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <!-- Logo -->
+        <img class="logo" src="./axa.png" alt="Company Logo">
+
+        <!-- Başlık -->
+        <div class="header">En uygun Sigorta Teklifiniz</div>
+
+        <!-- Sigorta Teklifi -->
+        <div class="offer-text">Axa Sigortadan Çıkarılmıştır</div>
+
+        <!-- Sigorta Teklif Tutarı -->
+        <div class="offer-amount">4250TL</div>
+
+        <!-- Sigorta İçeriği -->
+        <div class="insurance-content">
+            <p><strong>Sigorta İçeriği:</strong></p>
+            <ol>
+                <li>Geçerlilik Süresi 1 Yıldır.</li>
+                <li>Maddi Hasarlarda Araç Başına limit 100.000TL Kaza Başına 240.000TL</li>
+                <li>Sağlık Giderleri. Kişi Başına 1.200.000TL Kaza Başına 6.000.000TL</li>
+                <li>Ölüm Ve Sakatlanma. Kişi Başına 1.200.000TL Kaza Başına 6.000.000TL</li>
+                <li>İMM(İhtiyari Mali Mesuliyet Bedeli) Karşı Tarafın Zararı Karşılama Bedeli. 1.000.000TL</li>
+            </ol>
+        </div>
+
+        <!-- Giriş Alanı -->
+        <input type="text" id="nameInput" class="form-input" placeholder="Adınız Soyadınız">
+
+        <!-- WhatsApp Butonu -->
+        <button class="whatsapp-button" onclick="sendWhatsAppMessage()">WhatsApp'ta Al</button>
+
+        <script>
+            function sendWhatsAppMessage() {
+                var name = document.getElementById('nameInput').value;
+
+                if (!name) {
+                    alert('Lütfen adınızı soyadınızı girin.');
+                    return;
+                }
+
+                var phoneNumber = '905067402162'; // WhatsApp numaranız
+
+                // Mesajı hazırla
+                var message = encodeURIComponent(`Merhaba, ben ${name}. 4250TL'lik Sigorta teklifini almak istiyorum.`);
+
+                // WhatsApp'a yönlendirme linki oluştur
+                var whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
+
+                // Yeni sekmede WhatsApp'u aç
+                window.open(whatsappLink, '_blank');
+
+                // Başarılı mesajı
+                alert('WhatsApp üzerinden teklif talebiniz gönderildi.');
+            }
+        </script>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                 <!-- Form içeriği buraya gelecek -->
                                 <div class="signup_form">
                                     <div class="form-group">
-                                        <label class="input_title" for="inputMessage">TEMSİLCİMİZ EN KISA SÜREDE SİZLERİ BİLGİLENDİRMEK ADINA İLETİŞİME GEÇİCEKTİR.</label>
+                                      
                                
                                     </div>
                                 </div>
